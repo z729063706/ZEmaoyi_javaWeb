@@ -5,6 +5,8 @@ public class aboutUs {
     private int id;
     private String title;
     private String pic;
+    private String intro;
+    private String detail;
     
     public aboutUs(String title, String pic) {
         this.title = title;
