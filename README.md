@@ -6,6 +6,8 @@ Zyh jb so big
 
 The workspace contains two folders by default, where:
 
+
+dwadwadwadfwadawddawdwad
 - `src`: the folder to maintain sources
 - `lib`: the folder to maintain dependencies
 
