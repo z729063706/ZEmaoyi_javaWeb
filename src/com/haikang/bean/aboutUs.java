@@ -1,4 +1,4 @@
-package com.zyh.bean;
+package com.haikang.bean;
 
 
 public class aboutUs {

@@ -1,7 +1,6 @@
-package com.zyh.util;
+package com.haikang.util;
 
 import java.beans.PropertyVetoException;
-import java.rmi.server.ObjID;
 import java.sql.*;
 
 import javax.sql.DataSource;
@@ -22,9 +21,9 @@ public class c3p0Util {
         } catch (PropertyVetoException e) {
             e.printStackTrace();
         }
-        ds.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/haikang");
-        ds.setUser("root");
-        ds.setPassword("zzzyyyhhh");
+        ds.setJdbcUrl("jdbc:mysql://8.141.64.60:3306/maoyi");
+        ds.setUser("maoyi");
+        ds.setPassword("maoyi123");
         ds.setInitialPoolSize(10);
         ds.setMinPoolSize(5);
         ds.setMaxPoolSize(100);

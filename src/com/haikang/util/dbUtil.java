@@ -1,4 +1,4 @@
-package com.zyh.util;
+package com.haikang.util;
 
 
 import java.io.FileInputStream;
