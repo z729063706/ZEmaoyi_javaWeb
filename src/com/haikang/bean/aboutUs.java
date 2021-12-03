@@ -1,25 +1,25 @@
 package com.haikang.bean;
 
 
-public class aboutUs {
+public class AboutUs {
     private int id;
     private String title;
     private String pic;
     private String intro;
     private String detail;
     
-    public aboutUs(String title, String pic) {
+    public AboutUs(String title, String pic) {
         this.title = title;
         this.pic = pic;
     }
     
-    public aboutUs(int id, String title, String pic) {
+    public AboutUs(int id, String title, String pic) {
         this.id = id;
         this.title = title;
         this.pic = pic;
     }
 
-    public aboutUs() {
+    public AboutUs() {
     }
 
     public int getId() {

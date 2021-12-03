@@ -7,12 +7,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.haikang.bean.aboutUs;
+import com.haikang.bean.AboutUs;
 import com.haikang.util.c3p0Util;
 
-public class abuoutUsDao {
+public class AbuoutUsDao {
     
-    public static int insertAboutUs(aboutUs aboUs){
+    public static int insertAboutUs(AboutUs aboUs){
         String sql = "insert into aboutus(title,pic) values (?,?)";
         return c3p0Util.update(sql, aboUs.getTitle(),aboUs.getPic());
     }
@@ -20,13 +20,13 @@ public class abuoutUsDao {
         String sql = "delete from aboutus where id = ?";
         return c3p0Util.update(sql, id);
     }
-    public static int editAboutUs(aboutUs aboUs,Integer id){
+    public static int editAboutUs(AboutUs aboUs,Integer id){
         String sql = "update aboutus set title = ?, pic = ? where id = ?";
         return c3p0Util.update(sql, aboUs.getTitle(),aboUs.getPic(),id);        
     }
 
-    public static List<aboutUs> getAboutUs(){
-        List<aboutUs> re = new ArrayList<aboutUs>(); 
+    public static List<AboutUs> getAboutUs(){
+        List<AboutUs> re = new ArrayList<AboutUs>(); 
         String sql = "select * from aboutus";
         PreparedStatement prst = null;
         Connection conn = null;
@@ -36,7 +36,7 @@ public class abuoutUsDao {
             prst = conn.prepareStatement(sql);
             res = prst.executeQuery(); 
             while(res.next()){
-                re.add(new aboutUs(res.getString("title"), res.getString("pic")));
+                re.add(new AboutUs(res.getString("title"), res.getString("pic")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
