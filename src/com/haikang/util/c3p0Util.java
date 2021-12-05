@@ -11,7 +11,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 public class c3p0Util {
     
     
-    private static DataSource dataSource = getDS();
+    public static DataSource dataSource = getDS();
 
     private static DataSource getDS(){
         //ComboPooledDataSource ds = new ComboPooledDataSource("mysql");
