@@ -10,6 +10,11 @@ import java.util.List;
 import com.haikang.bean.AboutUs;
 import com.haikang.util.c3p0Util;
 
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.ResultSetHandler;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+
 public class AbuoutUsDao {
     
     public static int insertAboutUs(AboutUs aboUs){
@@ -28,25 +33,25 @@ public class AbuoutUsDao {
     public static List<AboutUs> getAboutUs(){
         List<AboutUs> re = new ArrayList<AboutUs>(); 
         String sql = "select * from aboutus";
-        PreparedStatement prst = null;
-        Connection conn = null;
-        ResultSet res = null;
+        QueryRunner qr = new QueryRunner(c3p0Util.dataSource);
+        ResultSetHandler<List<AboutUs>> rsh = new BeanListHandler<AboutUs>(AboutUs.class);
         try {
-            conn = c3p0Util.getConnection();
-            prst = conn.prepareStatement(sql);
-            res = prst.executeQuery(); 
-            while(res.next()){
-                re.add(new AboutUs(res.getString("title"), res.getString("pic")));
-            }
+            re = qr.query(sql, rsh);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        try {
-            res.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        c3p0Util.closeAll(conn, prst);
         return re;
     } 
+    public static AboutUs getAboutUsById(Integer id){
+        AboutUs aboutus = null;
+        String sql = " select * from aboutus WHERE ID=? ";
+        QueryRunner qr = new QueryRunner(c3p0Util.dataSource);
+        ResultSetHandler<AboutUs> rsh = new BeanHandler<AboutUs>(AboutUs.class);
+        try {
+            aboutus = qr.query(sql, rsh, id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return aboutus;
+    }
 }

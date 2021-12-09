@@ -8,6 +8,22 @@ public class AboutUs {
     private String intro;
     private String detail;
     
+    public String getIntro() {
+        return intro;
+    }
+
+    public void setIntro(String intro) {
+        this.intro = intro;
+    }
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
     public AboutUs(String title, String pic) {
         this.title = title;
         this.pic = pic;

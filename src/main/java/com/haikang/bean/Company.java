@@ -3,20 +3,19 @@ package com.haikang.bean;
 public class Company {
 	
 	private String	comid;      
-	private String	comName; 
-	private String	shortComName;     
-	
+	private String	comname; 
+	private String	shortcomName;     
+	private String  mainpic;
 	private String	contacts;      
 	private String	telephone;     
-	private String	userName;      
+	private String	username;      
 	private String	password;      
 	private String	vipbegin;     
 	private String	vipend;         
 	private String	management;      
 
-	private Integer		recommend;      
-	private Integer 	category;       
-	private String	mainImage;      
+	private Integer	recommend;      
+	private Integer category;   
 	private String	brief;         
 	private String	detailed;     
 	private String	applyTime;      
@@ -26,24 +25,36 @@ public class Company {
 	private String	role;
 	private Integer vipflag;
 
-
+	
+	public String getComname() {
+		return comname;
+	}
+	public void setComname(String comname) {
+		this.comname = comname;
+	}
+	public String getShortcomName() {
+		return shortcomName;
+	}
+	public void setShortcomName(String shortcomName) {
+		this.shortcomName = shortcomName;
+	}
+	public String getMainpic() {
+		return mainpic;
+	}
+	public void setMainpic(String mainpic) {
+		this.mainpic = mainpic;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 	public String getComid() {
 		return comid;
 	}
 	public void setComid(String comid) {
 		this.comid = comid;
-	}
-	public String getComName() {
-		return comName;
-	}
-	public void setComName(String comName) {
-		this.comName = comName;
-	}
-	public String getShortComName() {
-		return shortComName;
-	}
-	public void setShortComName(String shortComName) {
-		this.shortComName = shortComName;
 	}
 	public String getContacts() {
 		return contacts;
@@ -56,12 +67,6 @@ public class Company {
 	}
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
-	}
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
 	}
 	public String getPassword() {
 		return password;
@@ -98,12 +103,6 @@ public class Company {
 	}
 	public void setCategory(Integer category) {
 		this.category = category;
-	}
-	public String getMainImage() {
-		return mainImage;
-	}
-	public void setMainImage(String mainImage) {
-		this.mainImage = mainImage;
 	}
 	public String getBrief() {
 		return brief;

@@ -4,7 +4,7 @@ import com.haikang.dao.OrderDao;
 
 public class orderTest {
     public static void main(String[] args) {
-        OrderDao.getOrdersBySupplyFlag(1);
+        OrderDao.getOrdersBySupplyFlag(0,4);
         
     }
 }

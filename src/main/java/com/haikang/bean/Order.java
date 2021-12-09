@@ -2,8 +2,8 @@ package com.haikang.bean;
 
 public class Order {
 	private String 	orderid;
-	private String 	orderNamech;
-	private String 	orderNameen;
+	private String 	ordernamech;
+	private String 	ordernameen;
 	private String 	summary;
 	private String 	businessid;
 	private String 	publishtime;
@@ -36,6 +36,18 @@ public class Order {
 	public void setAddflag(String addflag) {
 		this.addflag = addflag;
 	}
+	public String getOrdernamech() {
+		return ordernamech;
+	}
+	public void setOrdernamech(String ordernamech) {
+		this.ordernamech = ordernamech;
+	}
+	public String getOrdernameen() {
+		return ordernameen;
+	}
+	public void setOrdernameen(String ordernameen) {
+		this.ordernameen = ordernameen;
+	}
 	public String getDetailed() {
 		return detailed;
 	}
@@ -47,18 +59,6 @@ public class Order {
 	}
 	public void setOrderid(String orderid) {
 		this.orderid = orderid;
-	}
-	public String getOrderNamech() {
-		return orderNamech;
-	}
-	public void setOrderNamech(String orderNamech) {
-		this.orderNamech = orderNamech;
-	}
-	public String getOrderNameen() {
-		return orderNameen;
-	}
-	public void setOrderNameen(String orderNameen) {
-		this.orderNameen = orderNameen;
 	}
 	public String getSummary() {
 		return summary;
