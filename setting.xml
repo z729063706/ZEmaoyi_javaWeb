@@ -1,7 +1,7 @@
 <servers>
     <server>
 		<id>tomcatServer</id>
-		<username>ZhaoYunhao</username>
-		<password>zzzyyyhhh</password>
+		<username>admin</username>
+		<password>ZYH*zyh*12345</password>
 	</server>
 </servers>
