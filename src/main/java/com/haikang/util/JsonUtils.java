@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.alibaba.fastjson.JSONObject;
 
-public class JsonUtil {
+public class JsonUtils {
     public static JSONObject getRequestJsonObject(HttpServletRequest request) throws IOException {
         String json = getRequestJsonString(request);
         return JSONObject.parseObject(json);
